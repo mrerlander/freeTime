@@ -1,0 +1,12 @@
+@media (min-width: 768px){
+    .day-row  {
+        width: 100%;
+        *width: 100%;
+    }
+}
+@media (min-width: 992px) {
+    .day-row {
+        width: 14.285714285714285714285714285714%;
+        *width: 14.285714285714285714285714285714%;
+    }
+}
