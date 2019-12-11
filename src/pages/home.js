@@ -23,7 +23,7 @@ class Home extends Component {
 
     getUserData() {
         if (this.state.loggedIn) {
-            fetch('./userData?user=' + this.state.user, {
+            fetch('/api/userData?user=' + this.state.user, {
                 method: 'Get',
                 mode: 'cors',
                 headers: {
@@ -110,7 +110,7 @@ class Home extends Component {
         removeEarlierDate.push({date: new Date(date).toISOString(), times: [time0, time1, time2]});
         this.setState({userData: removeEarlierDate});
 
-        fetch('./updateData', {
+        fetch('/api/updateData', {
             method: 'Post',
             mode: 'cors',
             headers: {
