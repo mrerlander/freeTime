@@ -1,13 +1,13 @@
 import React from 'react';
 import './day.css';
-import {Col, Card, ListGroup} from 'react-bootstrap';
+import {Card, ListGroup} from 'react-bootstrap';
 import format from 'date-fns/format';
 
 const dateFormat = 'EEEE do';
 
 const Day = props => (
     <Card className={'day-card'}>
-        <Card.Header className={'text-center'}>{format(props.day, dateFormat)}</Card.Header>
+        <Card.Header className={'text-center'} id={props.day}>{format(props.day, dateFormat)}</Card.Header>
         <ListGroup variant="flush">
             <ListGroup.Item action
                             onClick={props.handleClick} className={'text-center'} variant={props.free[0]}>Morning</ListGroup.Item>
