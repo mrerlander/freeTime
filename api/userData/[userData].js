@@ -18,12 +18,14 @@ async function connectToDatabase(uri) {
 }
 
 module.exports = async (req, res) => {
-    const userName = req.query.user;
+    const {
+        query: { name }
+    } = req
     const db = await connectToDatabase(process.env.MONGODB_URI)
 
     const collection = await db.collection('users')
 
-    await collection.findOne({'userName': userName}, function (findErr, result) {
+    await collection.findOne({'userName': name}, function (findErr, result) {
         if (findErr) throw findErr;
 
         res.status(200).json(result)

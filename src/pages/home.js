@@ -23,7 +23,7 @@ class Home extends Component {
 
     getUserData() {
         if (this.state.loggedIn) {
-            fetch('/api/userData?user=' + this.state.user, {
+            fetch('/api/userData/' + this.state.user, {
                 method: 'Get',
                 mode: 'cors',
                 headers: {
