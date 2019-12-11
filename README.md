@@ -10,5 +10,6 @@ Some ideas for calendar implementation inspired by:
 https://blog.flowandform.agency/create-a-custom-calendar-in-react-3df1bfd0b728
 https://medium.com/@nitinpatel_20236/challenge-of-building-a-calendar-with-pure-javascript-a86f1303267d
 
+See the app at https://freetime.now.sh
 
 ©Michael Erlander 2019 
